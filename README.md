@@ -1,55 +1,21 @@
-# ComicCraft – AI Comic Story Creator
+**AI-ML-and-GEN-AI-Track-Project-Template**
 
-ComicCraft is a Generative AI web application that creates personalized five-panel comic stories from a user's idea.
+**Repository Structure**
 
-The application uses **FastAPI** for the backend, **Google Gemini** models for story generation, and **Stable Diffusion / placeholder image generation** for comic illustrations.
+1.Brainstorming & Ideation
 
----
+2.Requirement Analysis
 
-## Features
+3.Project Design Phase
 
-- Create a personalized 5-panel comic
-- Enter a custom story idea
-- Choose a character name
-- Choose a story setting
-- Select the story tone
-- Select an art style
-- Generate a comic outline using Gemini
-- Generate narration and dialogue using Gemini
-- Generate comic panel images
-- Preview the complete comic in the browser
-- Export the comic as a PDF
-- Download the generated PDF
-- JSON API endpoint for comic generation
-- FastAPI Swagger documentation
-- Demo mode without an API key
-- Automated tests using Pytest
+4.Project Planning Phase
 
----
+5.Project Development Phase
 
-## Project Architecture
+6.Project Testing
 
-```text
-User
- │
- ▼
-Web Interface
- │
- ▼
-FastAPI Backend
- │
- ├── Gemini Flash
- │      └── Generates 5-panel comic outline
- │
- ├── Gemini Pro
- │      └── Generates narration and dialogue
- │
- ├── Image Generator
- │      ├── Stable Diffusion
- │      └── Placeholder images
- │
- ├── Comic Layout Builder
- │      └── Combines story + images
- │
- └── PDF Exporter
-        └── Creates downloadable PDF
+7.Project Documentation
+
+8.Project Demonstration
+
+Replace the placeholder files with your team's project deliverables.
