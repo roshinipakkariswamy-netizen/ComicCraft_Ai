@@ -1,0 +1,261 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <p class="eyebrow">
+        CREATE • IMAGINE • EXPORT
+    </p>
+
+    <h1>
+        Turn your idea into a comic.
+    </h1>
+
+    <p>
+        Describe a story, choose your hero
+        and style, and ComicCraft builds a
+        five-panel comic with narration,
+        dialogue and illustrations.
+    </p>
+
+</section>
+
+
+{% if error %}
+
+<div class="alert">
+
+    {{ error }}
+
+</div>
+
+{% endif %}
+
+
+<form
+    class="card form-card"
+    action="/generate"
+    method="post"
+    onsubmit="showLoading()"
+>
+
+
+    <label>
+
+        Story Prompt
+
+        <textarea
+            name="story_prompt"
+            required
+            maxlength="2000"
+            placeholder="A brave fox discovers a hidden door in an enchanted forest..."
+        ></textarea>
+
+    </label>
+
+
+    <div class="grid two">
+
+        <label>
+
+            Main Character Name
+
+            <input
+                name="character_name"
+                required
+                maxlength="80"
+                placeholder="Milo"
+            >
+
+        </label>
+
+
+        <label>
+
+            Setting
+
+            <select name="setting">
+
+                <option>
+                    Enchanted forest
+                </option>
+
+                <option>
+                    School
+                </option>
+
+                <option>
+                    Space station
+                </option>
+
+                <option>
+                    Futuristic city
+                </option>
+
+                <option>
+                    Underwater kingdom
+                </option>
+
+            </select>
+
+        </label>
+
+    </div>
+
+
+    <div class="grid two">
+
+        <label>
+
+            Story Tone
+
+            <select name="tone">
+
+                <option>
+                    Light-hearted
+                </option>
+
+                <option>
+                    Funny
+                </option>
+
+                <option>
+                    Dramatic
+                </option>
+
+                <option>
+                    Poetic
+                </option>
+
+                <option>
+                    Adventurous
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            Art Style
+
+            <select name="art_style">
+
+                <option>
+                    Anime
+                </option>
+
+                <option>
+                    Comic book
+                </option>
+
+                <option>
+                    Pixel art
+                </option>
+
+                <option>
+                    Realistic
+                </option>
+
+                <option>
+                    Watercolor
+                </option>
+
+            </select>
+
+        </label>
+
+    </div>
+
+
+    <button
+        class="primary"
+        type="submit"
+        id="generateBtn"
+    >
+
+        Generate My Comic ✨
+
+    </button>
+
+
+    <p
+        id="loading"
+        class="loading hidden"
+    >
+
+        Creating your five panels…
+        this may take a little while.
+
+    </p>
+
+</form>
+
+
+<section class="features">
+
+    <div>
+
+        <b>01</b>
+
+        <span>
+            Outline
+        </span>
+
+        <small>
+            Five connected panels
+        </small>
+
+    </div>
+
+
+    <div>
+
+        <b>02</b>
+
+        <span>
+            Story
+        </span>
+
+        <small>
+            Narration + dialogue
+        </small>
+
+    </div>
+
+
+    <div>
+
+        <b>03</b>
+
+        <span>
+            Illustrate
+        </span>
+
+        <small>
+            AI comic-style art
+        </small>
+
+    </div>
+
+
+    <div>
+
+        <b>04</b>
+
+        <span>
+            Export
+        </span>
+
+        <small>
+            Downloadable PDF
+        </small>
+
+    </div>
+
+</section>
+
+{% endblock %}
